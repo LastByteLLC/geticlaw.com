@@ -1,4 +1,5 @@
 import type { APIContext } from 'astro';
+import { env } from 'cloudflare:workers';
 
 export const prerender = false;
 
@@ -26,7 +27,7 @@ export async function OPTIONS({ request }: APIContext) {
   return new Response(null, { status: 204, headers: corsHeaders(origin) });
 }
 
-export async function POST({ request, locals }: APIContext) {
+export async function POST({ request }: APIContext) {
   const origin = request.headers.get('origin');
   const headers = corsHeaders(origin);
 
@@ -64,7 +65,7 @@ export async function POST({ request, locals }: APIContext) {
     });
   }
 
-  const db = (locals as any).runtime?.env?.DB;
+  const db = (env as any).DB;
   if (!db) {
     return new Response(JSON.stringify({ error: 'Database not configured' }), {
       status: 503,
