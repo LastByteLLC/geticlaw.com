@@ -1,0 +1,76 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import { copy } from '../content/copy';
+---
+
+<Layout title={copy.faq.title}>
+  <main class="container page">
+    <h1 class="page-title">{copy.faq.title}</h1>
+
+    <div class="faq-list">
+      {copy.faq.items.map((item) => (
+        <details class="faq-item">
+          <summary class="faq-question">{item.question}</summary>
+          <p class="faq-answer" set:html={item.answer} />
+        </details>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    padding: 64px 24px 80px;
+    max-width: 720px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-question {
+    padding: 20px 0;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .faq-question::after {
+    content: '+';
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    transition: transform 0.2s;
+  }
+
+  .faq-item[open] .faq-question::after {
+    content: '\2212';
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-answer {
+    padding: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+</style>

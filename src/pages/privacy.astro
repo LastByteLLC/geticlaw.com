@@ -1,0 +1,71 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import { copy } from '../content/copy';
+---
+
+<Layout title={copy.privacy.title}>
+  <main class="container page">
+    <h1 class="page-title">{copy.privacy.title}</h1>
+    <p class="page-meta">Last updated: {copy.privacy.lastUpdated}</p>
+    <p class="page-intro">{copy.privacy.intro}</p>
+
+    {copy.privacy.sections.map((section) => (
+      <section class="legal-section">
+        <h2>{section.heading}</h2>
+        <p set:html={section.content} />
+        {'legal' in section && (
+          <p class="legal-detail" set:html={section.legal} />
+        )}
+      </section>
+    ))}
+  </main>
+</Layout>
+
+<style>
+  .page {
+    padding: 64px 24px 80px;
+    max-width: 720px;
+  }
+
+  .page-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .page-meta {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 24px;
+  }
+
+  .page-intro {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .legal-section {
+    margin-bottom: 32px;
+  }
+
+  .legal-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .legal-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .legal-detail {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+  }
+</style>

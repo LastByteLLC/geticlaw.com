@@ -1,0 +1,121 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-surface: rgba(255, 255, 255, 0.72);
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg-gradient-start: rgba(255, 255, 255, 0.55);
+  --glass-bg-gradient-end: rgba(255, 255, 255, 0.30);
+  --glass-blur: 20px;
+  --glass-border: rgba(255, 255, 255, 0.45);
+  --glass-highlight: rgba(255, 255, 255, 0.6);
+  --glass-shadow: rgba(0, 0, 0, 0.12);
+
+  --menubar-bg: rgba(255, 255, 255, 0.72);
+  --menubar-text: rgba(0, 0, 0, 0.88);
+  --menubar-border: rgba(0, 0, 0, 0.12);
+  --menubar-hover: rgba(0, 0, 0, 0.08);
+
+  --bubble-bg: rgba(0, 0, 0, 0.06);
+  --bubble-text: rgba(0, 0, 0, 0.85);
+  --pill-bg: rgba(255, 255, 255, 0.35);
+  --pill-border: rgba(255, 255, 255, 0.4);
+  --pill-hover: rgba(255, 255, 255, 0.55);
+  --pill-text: rgba(0, 0, 0, 0.8);
+
+  --wallpaper-base: #1a1a2e;
+  --wallpaper-fade: #ffffff;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --font-system: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --max-width: 1080px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0a0f;
+    --color-text: #f5f5f7;
+    --color-text-secondary: #a1a1a6;
+    --color-accent: #2997ff;
+    --color-accent-hover: #40a9ff;
+    --color-surface: rgba(30, 30, 30, 0.72);
+    --color-border: rgba(255, 255, 255, 0.08);
+
+    --glass-bg: rgba(40, 40, 40, 0.45);
+    --glass-bg-gradient-start: rgba(60, 60, 60, 0.55);
+    --glass-bg-gradient-end: rgba(40, 40, 40, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-highlight: rgba(255, 255, 255, 0.15);
+    --glass-shadow: rgba(0, 0, 0, 0.4);
+
+    --menubar-bg: rgba(30, 30, 30, 0.52);
+    --menubar-text: rgba(255, 255, 255, 0.88);
+    --menubar-border: rgba(255, 255, 255, 0.08);
+    --menubar-hover: rgba(255, 255, 255, 0.08);
+
+    --bubble-bg: rgba(255, 255, 255, 0.08);
+    --bubble-text: rgba(255, 255, 255, 0.85);
+    --pill-bg: rgba(255, 255, 255, 0.1);
+    --pill-border: rgba(255, 255, 255, 0.15);
+    --pill-hover: rgba(255, 255, 255, 0.18);
+    --pill-text: rgba(255, 255, 255, 0.85);
+
+    --wallpaper-base: #0a0a1a;
+    --wallpaper-fade: #0a0a0f;
+  }
+}
+
+/* Base */
+html {
+  font-family: var(--font-system);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}

@@ -1,0 +1,73 @@
+---
+import GradFlowBackground from './GradFlowBackground.tsx';
+---
+
+<section class="wallpaper" aria-hidden="true">
+  <div class="wallpaper-gradflow">
+    <GradFlowBackground client:load />
+  </div>
+  <div class="wallpaper-fallback"></div>
+</section>
+
+<style>
+  .wallpaper {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .wallpaper-gradflow {
+    position: absolute;
+    inset: 0;
+  }
+
+  .wallpaper-gradflow :global(.gradflow-wrapper) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .wallpaper-gradflow :global(.gradflow-wrapper > *) {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* CSS fallback if WebGL is unavailable */
+  .wallpaper-fallback {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--wallpaper-base);
+    background-image:
+      radial-gradient(circle 180px at 15% 40%, rgba(160, 50, 220, 0.8), transparent),
+      radial-gradient(circle 220px at 85% 35%, rgba(230, 60, 90, 0.7), transparent),
+      radial-gradient(circle 160px at 55% 75%, rgba(40, 120, 230, 0.75), transparent),
+      radial-gradient(circle 140px at 75% 60%, rgba(240, 160, 40, 0.6), transparent);
+    background-size: 200% 200%;
+    animation: wallpaper-drift 25s ease-in-out infinite alternate;
+  }
+
+  .wallpaper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--wallpaper-fade));
+    z-index: 1;
+  }
+
+  @keyframes wallpaper-drift {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 60%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wallpaper-fallback {
+      animation: none;
+    }
+  }
+</style>

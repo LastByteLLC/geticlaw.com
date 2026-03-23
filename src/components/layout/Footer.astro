@@ -1,0 +1,52 @@
+---
+import { copy } from '../../content/copy';
+---
+
+<footer class="site-footer">
+  <div class="site-footer-inner container">
+    <p class="copyright">{copy.site.copyright}</p>
+    <ul class="footer-nav">
+      {copy.nav.links.map((link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 32px 0;
+    margin-top: 80px;
+  }
+
+  .site-footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .copyright {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+  }
+
+  .footer-nav {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-nav a {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-nav a:hover {
+    color: var(--color-text);
+  }
+</style>

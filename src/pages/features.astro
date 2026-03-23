@@ -1,0 +1,63 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import { copy } from '../content/copy';
+---
+
+<Layout title={copy.features.headline}>
+  <main class="container page">
+    <h1 class="page-title">{copy.features.headline}</h1>
+    <p class="page-subtitle">{copy.features.subheadline}</p>
+
+    <div class="features-grid">
+      {copy.features.items.map((item) => (
+        <div class="feature-card">
+          <h2 class="feature-title">{item.title}</h2>
+          <p class="feature-description">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    padding: 64px 24px 80px;
+  }
+
+  .page-title {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+
+  .page-subtitle {
+    font-size: 18px;
+    color: var(--color-text-secondary);
+    margin-bottom: 48px;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .feature-card {
+    padding: 32px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+
+  .feature-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .feature-description {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+</style>

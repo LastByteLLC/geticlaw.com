@@ -1,0 +1,7 @@
+name = "geticlaw"
+compatibility_date = "2026-03-17"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "iclaw-db"
+database_id = "2654787a-a676-42ab-aea1-70d839381956"

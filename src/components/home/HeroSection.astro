@@ -1,0 +1,55 @@
+---
+import { copy } from '../../content/copy';
+---
+
+<section class="hero">
+  <div class="hero-inner container">
+    <h1 class="hero-headline">{copy.home.hero.headline}</h1>
+    <p class="hero-subheadline">{copy.home.hero.subheadline}</p>
+    <div class="hero-screenshot">
+      <div class="screenshot-placeholder">
+        <span>🚧 Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .hero-subheadline {
+    font-size: clamp(17px, 2.5vw, 21px);
+    color: var(--color-text-secondary);
+    max-width: 520px;
+    margin: 0 auto 48px;
+    line-height: 1.4;
+  }
+
+  .hero-screenshot {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .screenshot-placeholder {
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-lg);
+    background: var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    font-size: 15px;
+    border: 1px solid var(--color-border);
+  }
+</style>
