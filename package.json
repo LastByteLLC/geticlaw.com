@@ -22,6 +22,7 @@
     "@astrojs/react": "^5.0.1",
     "astro": "^6.0.8",
     "gradflow": "^0.1.0",
+    "npm-check-updates": "^19.6.5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   }
