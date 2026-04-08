@@ -1,6 +1,6 @@
 # geticlaw.com
 
-Landing page and marketing site for [iClaw](https://github.com/LastByteLLC/iClaw), a free, open-source AI assistant for Mac powered by Apple Foundation Models.
+Landing page and marketing site for [iClaw](https://github.com/LastByteLLC/iClaw), a free, open-source AI assistant for Mac powered by Apple Intelligence.
 
 **Live site:** [geticlaw.com](https://geticlaw.com)
 

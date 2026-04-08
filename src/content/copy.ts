@@ -47,7 +47,7 @@ export const copy = {
       messages: [
         {
           role: 'assistant' as const,
-          text: `Hey! I\u2019m ${config.appName} \u2014 your private AI assistant. I run entirely on your Mac using Apple Foundation Models.`,
+          text: `Hey! I\u2019m ${config.appName} \u2014 your private AI assistant. I run entirely on your Mac using Apple Intelligence.`,
         },
         {
           role: 'assistant' as const,
@@ -158,9 +158,9 @@ export const copy = {
       {
         heading: 'Data Processing',
         content:
-          'All AI processing happens entirely on your device using Apple Foundation Models. No conversations, prompts, or responses are ever sent to any server. We have no access to your conversations.',
+          'All AI processing happens entirely on your device using Apple Intelligence. No conversations, prompts, or responses are ever sent to any server. We have no access to your conversations.',
         legal:
-          `${config.companyName} ("we," "us," or "our") does not collect, transmit, store, or process any user-generated content, including but not limited to text prompts, conversational inputs, AI-generated responses, or any derivative data thereof. All natural language processing is performed exclusively on the end user's device via Apple Foundation Models, a framework provided by Apple Inc. We have no technical capability to access, intercept, or retrieve any such content. No server-side inference, logging, or telemetry of conversational data occurs at any point during the operation of the Software.`,
+          `${config.companyName} ("we," "us," or "our") does not collect, transmit, store, or process any user-generated content, including but not limited to text prompts, conversational inputs, AI-generated responses, or any derivative data thereof. All natural language processing is performed exclusively on the end user's device via Apple Intelligence, a framework provided by Apple Inc. We have no technical capability to access, intercept, or retrieve any such content. No server-side inference, logging, or telemetry of conversational data occurs at any point during the operation of the Software.`,
       },
       {
         heading: 'Crash Reports',
@@ -244,9 +244,9 @@ export const copy = {
       {
         heading: 'System Requirements',
         content:
-          `${config.appName} requires macOS 26 or later and a Mac with Apple Silicon. The app relies on Apple Foundation Models, which must be available on your device.`,
+          `${config.appName} requires macOS 26 or later and a Mac with Apple Silicon. The app relies on Apple Intelligence, which must be available on your device.`,
         legal:
-          `The Software requires macOS version 26 or later and a Mac computer equipped with Apple Silicon (M1 or later). The Software depends on Apple Foundation Models, a system-level framework provided by Apple Inc., which must be installed and available on the user's device. ${config.companyName} is not responsible for the availability, performance, accuracy, or continued support of Apple Foundation Models by Apple Inc. Changes to the macOS operating system or Apple Foundation Models by Apple Inc. may affect the functionality of the Software. ${config.companyName} makes no guarantee of compatibility with future operating system versions or hardware configurations.`,
+          `The Software requires macOS version 26 or later and a Mac computer equipped with Apple Silicon (M1 or later). The Software depends on Apple Intelligence, a system-level framework provided by Apple Inc., which must be installed and available on the user's device. ${config.companyName} is not responsible for the availability, performance, accuracy, or continued support of Apple Intelligence by Apple Inc. Changes to the macOS operating system or Apple Intelligence by Apple Inc. may affect the functionality of the Software. ${config.companyName} makes no guarantee of compatibility with future operating system versions or hardware configurations.`,
       },
       {
         heading: 'Data and Privacy',
@@ -306,12 +306,12 @@ export const copy = {
       {
         question: 'What macOS version do I need?',
         answer:
-          `${config.appName} requires macOS 26+ running on Apple Silicon. It uses Apple Foundation Models, available starting with macOS 26.`,
+          `${config.appName} requires macOS 26+ running on Apple Silicon. It uses Apple Intelligence, available starting with macOS 26.`,
       },
       {
         question: `Is ${config.appName} really free?`,
         answer:
-          'Yes. iClaw is completely free and open source. There are no subscriptions, API keys, or cloud AI providers.',
+          'Yes. iClaw is completely free and open source. There are no subscriptions, usage limits, API keys, or cloud AI providers.',
       },
       {
         question: `Does ${config.appName} send my data to the cloud?`,

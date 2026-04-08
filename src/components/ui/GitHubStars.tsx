@@ -56,6 +56,7 @@ export default function GitHubStars() {
       target="_blank"
       rel="noopener noreferrer"
       className="github-stars-btn"
+      title={`Star ${config.githubRepo} on GitHub`}
       aria-label={`Star ${config.githubRepo} on GitHub${formatted ? ` — ${formatted} stars` : ''}`}
     >
       <svg

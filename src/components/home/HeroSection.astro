@@ -1,5 +1,5 @@
 ---
-import { copy } from '../../content/copy';
+import { copy, config } from '../../content/copy';
 ---
 
 <section class="hero">
@@ -9,6 +9,10 @@ import { copy } from '../../content/copy';
     <div class="hero-screenshot">
       <img src="/screenshots/iClaw-London-Screenrecord.gif" alt="iClaw app demo" class="screenshot-img" draggable="false" loading="lazy" />
     </div>
+    <a href={config.dmgUrl} class="hero-download">
+      <svg class="dmg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+      Download DMG
+    </a>
   </div>
 </section>
 
@@ -45,5 +49,35 @@ import { copy } from '../../content/copy';
     margin: 0 auto;
     border: none;
     border-radius: var(--radius-lg);
+  }
+
+  .hero-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--color-accent);
+    color: #ffffff;
+    transition: background 0.15s, transform 0.15s;
+  }
+
+  .hero-download:hover {
+    background: var(--color-accent-hover);
+    color: #ffffff;
+  }
+
+  .hero-download:active {
+    transform: scale(0.97);
+  }
+
+  .dmg-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
   }
 </style>
