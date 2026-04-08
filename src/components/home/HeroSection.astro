@@ -7,9 +7,7 @@ import { copy } from '../../content/copy';
     <h1 class="hero-headline">{copy.home.hero.headline}</h1>
     <p class="hero-subheadline">{copy.home.hero.subheadline}</p>
     <div class="hero-screenshot">
-      <div class="screenshot-placeholder">
-        <span>🚧 Coming Soon</span>
-      </div>
+      <img src="/screenshots/iClaw-London-Screenrecord.gif" alt="iClaw app demo" class="screenshot-img" draggable="false" loading="lazy" />
     </div>
   </div>
 </section>
@@ -41,15 +39,11 @@ import { copy } from '../../content/copy';
     margin: 0 auto;
   }
 
-  .screenshot-placeholder {
-    aspect-ratio: 16 / 10;
+  .screenshot-img {
+    max-width: 100%;
+    width: 520px;
+    margin: 0 auto;
+    border: none;
     border-radius: var(--radius-lg);
-    background: var(--color-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-text-secondary);
-    font-size: 15px;
-    border: 1px solid var(--color-border);
   }
 </style>

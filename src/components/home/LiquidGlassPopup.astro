@@ -1,5 +1,6 @@
 ---
 import { copy } from '../../content/copy';
+import { config } from '../../content/copy';
 import ChatBubble from './ChatBubble.astro';
 ---
 
@@ -12,7 +13,7 @@ import ChatBubble from './ChatBubble.astro';
     </div>
     <div class="chat-suggestions">
       {copy.home.chat.suggestions.map((s) => (
-        <a href={s.href} class="chat-suggestion-pill">
+        <a href={s.href} class="chat-suggestion-pill" {...(s.href === config.appStoreUrl ? { 'data-coming-soon': '' } : {})}>
           <span class="pill-icon" aria-hidden="true">{s.icon}</span>
           {s.label}
         </a>

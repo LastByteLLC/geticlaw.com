@@ -2,15 +2,16 @@
 import BaseHead from './BaseHead.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import MockMenubar from '../home/MockMenubar.astro';
+import LiquidGlassPopup from '../home/LiquidGlassPopup.astro';
+import WallpaperSection from '../home/WallpaperSection.astro';
 
 interface Props {
   title?: string;
   description?: string;
-  hideHeader?: boolean;
-  transparentHeader?: boolean;
 }
 
-const { title, description, hideHeader = false, transparentHeader = false } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,8 +20,47 @@ const { title, description, hideHeader = false, transparentHeader = false } = As
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    {!hideHeader && <Header transparent={transparentHeader} />}
+    <MockMenubar />
+    <LiquidGlassPopup />
+    <div class="wallpaper-hero-wrapper">
+      <WallpaperSection />
+      <div class="wallpaper-header-overlay">
+        <Header transparent={true} />
+      </div>
+    </div>
     <slot />
     <Footer />
   </body>
 </html>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const link = (e.target as HTMLElement).closest('[data-coming-soon]');
+    if (!link) return;
+    e.preventDefault();
+
+    // Remove any existing tooltip
+    document.querySelector('.coming-soon-tooltip')?.remove();
+
+    const tooltip = document.createElement('span');
+    tooltip.className = 'coming-soon-tooltip';
+    tooltip.textContent = 'Coming Soon';
+    link.appendChild(tooltip);
+
+    setTimeout(() => tooltip.remove(), 2000);
+  });
+</script>
+
+<style>
+  .wallpaper-hero-wrapper {
+    position: relative;
+  }
+
+  .wallpaper-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+</style>

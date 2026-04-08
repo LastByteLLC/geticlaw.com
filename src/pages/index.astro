@@ -1,24 +1,11 @@
 ---
 import Layout from '../components/layout/Layout.astro';
-import Header from '../components/layout/Header.astro';
-import MockMenubar from '../components/home/MockMenubar.astro';
-import LiquidGlassPopup from '../components/home/LiquidGlassPopup.astro';
-import WallpaperSection from '../components/home/WallpaperSection.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import CtaSection from '../components/home/CtaSection.astro';
 import { copy } from '../content/copy';
 ---
 
-<Layout hideHeader={true}>
-  <MockMenubar />
-  <LiquidGlassPopup />
-  <div class="wallpaper-hero-wrapper">
-    <WallpaperSection />
-    <div class="wallpaper-header-overlay">
-      <Header transparent={true} />
-    </div>
-  </div>
-
+<Layout>
   <main>
     <HeroSection />
 
@@ -40,18 +27,6 @@ import { copy } from '../content/copy';
 </Layout>
 
 <style>
-  .wallpaper-hero-wrapper {
-    position: relative;
-  }
-
-  .wallpaper-header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-  }
-
   .features {
     padding: 40px 0 60px;
   }

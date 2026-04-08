@@ -24,7 +24,7 @@ export const copy = {
     name: config.appName,
     tagline: 'Your private AI assistant for Mac.',
     description:
-      `${config.appName} is a free, open-source AI assistant powered by Apple Foundation Models. Fully on-device. No cloud. No subscription.`,
+      `${config.appName} is a free, open-source AI assistant powered by Apple Intelligence. Fully local. No cloud. No subscription.`,
     copyright: `\u00A9 ${new Date().getFullYear()} ${config.companyName}. All rights reserved.`,
     url: config.siteUrl,
   },
@@ -74,21 +74,21 @@ export const copy = {
     },
 
     hero: {
-      headline: 'AI that lives on your Mac.',
+      headline: `${config.appName}. AI that lives on your Mac.`,
       subheadline:
-        'Powered by Apple Foundation Models. Private by design. Free forever.',
+        'Powered by Apple Intelligence. Personal and private. Secure by design. Free forever.',
     },
 
     features: [
       {
         title: 'Fully On-Device',
         description:
-          `Every conversation stays on your Mac. ${config.appName} uses Apple Foundation Models \u2014 no internet required.`,
+          `Every conversation stays on your Mac. ${config.appName} uses Apple Intelligence (or Ollama) \u2014 no internet required.`,
       },
       {
         title: 'Menubar & Dock',
         description:
-          'Launch from the menubar for quick tasks or the dock for longer sessions. Always one click away.',
+          'Launch from the menubar for quick tasks, or the dock for longer sessions. Always a click away.',
       },
       {
         title: 'Private by Design',
@@ -119,7 +119,7 @@ export const copy = {
       {
         title: 'Natural Conversations',
         description:
-          'Chat naturally with a powerful on-device language model. Get help with writing, brainstorming, summarizing, and more.',
+          'Chat naturally with a powerful on-device language model. Get tech support, check the weather, or dive into new topics.',
       },
       {
         title: 'Menubar Quick Access',
@@ -132,9 +132,9 @@ export const copy = {
           `Open ${config.appName} as a full window for longer sessions, research, and multi-turn conversations.`,
       },
       {
-        title: 'Apple Foundation Models',
+        title: 'Local AI',
         description:
-          'Built on Apple\u2019s on-device AI. Runs natively on Apple Silicon with zero cloud dependency.',
+          'Built on Apple\u2019s on-device AI or Ollama. Runs natively on Apple Silicon without the cloud.',
       },
       {
         title: 'No Account Required',
