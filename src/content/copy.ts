@@ -8,7 +8,7 @@ export const config = {
   githubRepo: 'LastByteLLC/iClaw',
   githubUrl: 'https://github.com/LastByteLLC/iClaw',
   appStoreUrl: '#',   // TODO: replace with real App Store link
-  dmgUrl: '#',        // TODO: replace with real DMG download link
+  dmgUrl: 'https://github.com/LastByteLLC/iClaw/releases/latest/download/iClaw.dmg',
   siteUrl: 'https://geticlaw.com',
 } as const;
 
