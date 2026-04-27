@@ -18,12 +18,12 @@
   },
   "homepage": "https://geticlaw.com",
   "dependencies": {
-    "@astrojs/cloudflare": "^13.1.7",
-    "@astrojs/react": "^5.0.3",
-    "astro": "^6.1.4",
+    "@astrojs/cloudflare": "^13.2.1",
+    "@astrojs/react": "^5.0.4",
+    "astro": "^6.1.9",
     "gradflow": "^0.1.0",
-    "npm-check-updates": "^20.0.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "npm-check-updates": "^22.0.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   }
 }
