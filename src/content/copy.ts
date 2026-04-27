@@ -102,6 +102,51 @@ export const copy = {
       },
     ],
 
+    showcase: [
+      {
+        title: 'Dynamic & Interactive',
+        description:
+          `${config.appName} doesn\u2019t just respond with a wall of text. Results are clean, visual, and interactive \u2014 from maps and charts to rich previews.`,
+        imgSrc: '/screenshots/iClaw-Maps.png',
+        imgAlt: `${config.appName} displaying an interactive map`,
+        imgWidth: 1000,
+        imgHeight: 1160,
+        imgMaxWidth: 500,
+      },
+      {
+        title: 'Private & Secure by Design',
+        description:
+          `${config.appName} lives in the App Sandbox, and only has access to the permissions you grant it. Nothing gets read, deleted, or moved without your explicit consent.`,
+        imgSrc: '/screenshots/iClaw-Permission-Request.png',
+        imgAlt: `${config.appName} permission request dialog`,
+        imgWidth: 744,
+        imgHeight: 724,
+        imgMaxWidth: 372,
+        reverse: true,
+      },
+      {
+        title: 'Dozens of Tools',
+        description:
+          `Run the numbers, translate a message, transcribe a podcast, convert units, check stocks \u2014 and more. With over 40 tools, ${config.appName} is safe and powerful.`,
+        imgSrc: '/screenshots/iClaw-Math.png',
+        imgAlt: `${config.appName} solving a math problem`,
+        imgWidth: 1000,
+        imgHeight: 1160,
+        imgMaxWidth: 500,
+      },
+      {
+        title: 'Customizable & Extensible',
+        description:
+          `Use local models with Ollama, surf the web with a Safari extension, teach it new skills, and configure every detail. ${config.appName} adapts to the way you work.`,
+        imgSrc: '/screenshots/iClaw-Settings.png',
+        imgAlt: `${config.appName} settings screen`,
+        imgWidth: 1424,
+        imgHeight: 1368,
+        imgMaxWidth: 712,
+        reverse: true,
+      },
+    ],
+
     cta: {
       headline: `Ready to try ${config.appName}?`,
       subheadline: 'Available for macOS 26 and later.',
@@ -115,36 +160,65 @@ export const copy = {
   features: {
     headline: `What ${config.appName} can do`,
     subheadline: 'A focused AI assistant that respects your privacy.',
-    items: [
+    pillars: [
       {
-        title: 'Natural Conversations',
+        title: 'On-Device AI',
         description:
-          'Chat naturally with a powerful on-device language model. Get tech support, check the weather, or dive into new topics.',
+          `All processing happens locally on your Mac with Apple Intelligence or Ollama. No cloud, no internet, no API keys.`,
       },
       {
-        title: 'Menubar Quick Access',
+        title: 'Zero Telemetry',
         description:
-          'Click the menubar icon and start typing. Get answers without leaving what you\u2019re working on.',
-      },
-      {
-        title: 'Dock Mode',
-        description:
-          `Open ${config.appName} as a full window for longer sessions, research, and multi-turn conversations.`,
-      },
-      {
-        title: 'Local AI',
-        description:
-          'Built on Apple\u2019s on-device AI or Ollama. Runs natively on Apple Silicon without the cloud.',
-      },
-      {
-        title: 'No Account Required',
-        description:
-          'No sign-up, no login, no subscription. Download and start using it immediately.',
+          'No analytics, no tracking, no account. Optional anonymous crash reports only if you opt in.',
       },
       {
         title: 'Open Source',
         description:
-          'Fully transparent. Read the source, verify the privacy claims, and contribute improvements.',
+          'AGPL 3.0 licensed. Inspect every line, verify the privacy claims, contribute or fork.',
+      },
+    ],
+    showcase: [
+      {
+        title: 'Teach iClaw new tricks',
+        description:
+          `Drop a markdown file into ${config.appName} to learn a new workflow. Skills run sandboxed in a format you can read and audit.`,
+        imgSrc: '/screenshots/iClaw-Skills-Catalog.png',
+        imgAlt: `${config.appName} skills catalog showing user-defined workflows`,
+        imgWidth: 1200,
+        imgHeight: 900,
+        imgMaxWidth: 600,
+      },
+      {
+        title: 'Generated widgets, not paragraphs',
+        description:
+          `When a question deserves a calendar, map, or table, ${config.appName} generates the UI on-the-fly. No more reading pages of text.`,
+        imgSrc: '/screenshots/iClaw-Dynamic-Widget.png',
+        imgAlt: `${config.appName} rendering a dynamic widget`,
+        imgWidth: 1000,
+        imgHeight: 1160,
+        imgMaxWidth: 400,
+        reverse: true,
+      },
+      {
+        title: 'Ask about whatever\u2019s on your screen',
+        description:
+          `With the Safari, Chrome, or Firefox extension, ${config.appName} can read the page you\u2019re looking at \u2014 no copy-paste, no tab juggling.`,
+        imgSrc: '/screenshots/iClaw-Browser-Bridge.png',
+        imgAlt: `Sending a web page to ${config.appName} from Safari`,
+        imgWidth: 1400,
+        imgHeight: 900,
+        imgMaxWidth: 700,
+      },
+      {
+        title: 'Type, paste, or just talk',
+        description:
+          `Hit the microphone for hands-free queries. Speech is transcribed on-device \u2014 your voice never leaves your Mac.`,
+        imgSrc: '/screenshots/iClaw-Voice-Input.png',
+        imgAlt: `${config.appName} with the microphone active for voice input`,
+        imgWidth: 1000,
+        imgHeight: 1160,
+        imgMaxWidth: 400,
+        reverse: true,
       },
     ],
   },

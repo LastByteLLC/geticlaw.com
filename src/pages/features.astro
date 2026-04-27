@@ -1,31 +1,48 @@
 ---
 import Layout from '../components/layout/Layout.astro';
+import CtaSection from '../components/home/CtaSection.astro';
+import ShowcaseRow from '../components/ShowcaseRow.astro';
 import { copy } from '../content/copy';
 ---
 
 <Layout title={copy.features.headline}>
-  <main class="container page">
-    <h1 class="page-title">{copy.features.headline}</h1>
-    <p class="page-subtitle">{copy.features.subheadline}</p>
+  <main>
+    <section class="container page-header">
+      <h1 class="page-title">{copy.features.headline}</h1>
+      <p class="page-subtitle">{copy.features.subheadline}</p>
 
-    <div class="features-screenshot">
-      <img src="/screenshots/iClaw-Podcast-Screenrecord.gif" alt="iClaw podcast feature demo" class="screenshot-img" draggable="false" />
-    </div>
+      <div class="features-screenshot">
+        <img
+          src="/screenshots/iClaw-Podcast-Screenrecord.gif"
+          alt="iClaw podcast feature demo"
+          class="screenshot-img"
+          draggable="false"
+        />
+      </div>
 
-    <div class="features-grid">
-      {copy.features.items.map((item) => (
-        <div class="feature-card">
-          <h2 class="feature-title">{item.title}</h2>
-          <p class="feature-description">{item.description}</p>
-        </div>
+      <div class="pillars-grid">
+        {copy.features.pillars.map((pillar) => (
+          <div class="pillar-card">
+            <h2 class="pillar-title">{pillar.title}</h2>
+            <p class="pillar-description">{pillar.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="showcase container">
+      {copy.features.showcase.map((row) => (
+        <ShowcaseRow {...row} />
       ))}
-    </div>
+    </section>
+
+    <CtaSection />
   </main>
 </Layout>
 
 <style>
-  .page {
-    padding: 64px 24px 80px;
+  .page-header {
+    padding: 64px 24px 24px;
   }
 
   .page-title {
@@ -43,7 +60,7 @@ import { copy } from '../content/copy';
 
   .features-screenshot {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
   }
 
   .screenshot-img {
@@ -53,27 +70,46 @@ import { copy } from '../content/copy';
     margin: 0 auto;
   }
 
-  .features-grid {
+  .pillars-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
   }
 
-  .feature-card {
-    padding: 32px;
+  .pillar-card {
+    padding: 28px;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
+    transition: border-color 0.15s;
   }
 
-  .feature-title {
-    font-size: 20px;
+  .pillar-card:hover {
+    border-color: var(--color-text-secondary);
+  }
+
+  .pillar-title {
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
-  .feature-description {
-    font-size: 16px;
+  .pillar-description {
+    font-size: 15px;
     color: var(--color-text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
+  }
+
+  /* Showcase wrapper — individual row layout lives in ShowcaseRow.astro */
+  .showcase {
+    padding: 64px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .showcase {
+      gap: 56px;
+    }
   }
 </style>

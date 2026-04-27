@@ -2,6 +2,7 @@
 import Layout from '../components/layout/Layout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import CtaSection from '../components/home/CtaSection.astro';
+import ShowcaseRow from '../components/ShowcaseRow.astro';
 import { copy } from '../content/copy';
 ---
 
@@ -23,45 +24,9 @@ import { copy } from '../content/copy';
     </section>
 
     <section class="showcase container">
-      <div class="showcase-row">
-        <div class="showcase-img">
-          <img src="/screenshots/iClaw-Maps.png" alt="iClaw displaying an interactive map" width="1000" height="1160" draggable="false" style="max-width: min(100%, 500px);" />
-        </div>
-        <div class="showcase-text">
-          <h3 class="showcase-title">Dynamic &amp; Interactive</h3>
-          <p class="showcase-description">iClaw doesn't just respond with a wall of text. Results are clean, visual, and interactive — from maps and charts to rich previews.</p>
-        </div>
-      </div>
-
-      <div class="showcase-row showcase-row-reverse">
-        <div class="showcase-img">
-          <img src="/screenshots/iClaw-Permission-Request.png" alt="iClaw permission request dialog" width="744" height="724" draggable="false" style="max-width: min(100%, 372px);" />
-        </div>
-        <div class="showcase-text">
-          <h3 class="showcase-title">Private &amp; Secure by Design</h3>
-          <p class="showcase-description">iClaw lives in the App Sandbox, and only has access to the permissions you grant it. Nothing gets read, deleted, or moved without your explicit consent.</p>
-        </div>
-      </div>
-
-      <div class="showcase-row">
-        <div class="showcase-img">
-          <img src="/screenshots/iClaw-Math.png" alt="iClaw solving a math problem" width="1000" height="1160" draggable="false" style="max-width: min(100%, 500px);" />
-        </div>
-        <div class="showcase-text">
-          <h3 class="showcase-title">40+ Built-In Tools</h3>
-          <p class="showcase-description">Run the numbers, translate a message, transcribe a podcast, convert units, check stocks — and more. With over 40 tools, iClaw is safe and powerful.</p>
-        </div>
-      </div>
-
-      <div class="showcase-row showcase-row-reverse">
-        <div class="showcase-img">
-          <img src="/screenshots/iClaw-Settings.png" alt="iClaw settings screen" width="1424" height="1368" draggable="false" style="max-width: min(100%, 712px);" />
-        </div>
-        <div class="showcase-text">
-          <h3 class="showcase-title">Customizable &amp; Extensible</h3>
-          <p class="showcase-description">Use local models with Ollama, surf the web with a Safari extension, teach it new skills, and configure every detail. iClaw adapts to the way you work.</p>
-        </div>
-      </div>
+      {copy.home.showcase.map((row) => (
+        <ShowcaseRow {...row} />
+      ))}
     </section>
 
     <CtaSection />
@@ -102,7 +67,7 @@ import { copy } from '../content/copy';
     line-height: 1.5;
   }
 
-  /* Showcase */
+  /* Showcase wrapper — individual row layout lives in ShowcaseRow.astro */
   .showcase {
     padding: 40px 24px 80px;
     display: flex;
@@ -110,58 +75,9 @@ import { copy } from '../content/copy';
     gap: 80px;
   }
 
-  .showcase-row {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-  }
-
-  .showcase-row-reverse {
-    flex-direction: row-reverse;
-  }
-
-  .showcase-img {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .showcase-img img {
-    height: auto;
-    border-radius: var(--radius-lg);
-  }
-
-  .showcase-text {
-    flex: 1 1 50%;
-  }
-
-  .showcase-title {
-    font-size: clamp(22px, 3vw, 28px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 12px;
-  }
-
-  .showcase-description {
-    font-size: clamp(15px, 2vw, 17px);
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    max-width: 440px;
-  }
-
   @media (max-width: 768px) {
     .showcase {
       gap: 56px;
-    }
-
-    .showcase-row,
-    .showcase-row-reverse {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .showcase-description {
-      max-width: none;
     }
   }
 </style>

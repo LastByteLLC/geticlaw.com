@@ -7,7 +7,7 @@ import { copy } from '../../content/copy';
     <h2 class="cta-headline">{copy.home.cta.headline}</h2>
     <p class="cta-subheadline">{copy.home.cta.subheadline}</p>
     <div class="cta-buttons">
-      <a href={copy.home.cta.primaryHref} class="cta-btn cta-btn-secondary" data-coming-soon>{copy.home.cta.primaryButton}</a>
+      <a href={copy.home.cta.primaryHref} class="cta-btn cta-btn-secondary btn-disabled" disabled aria-disabled="true" data-coming-soon title="Coming Soon">{copy.home.cta.primaryButton}</a>
       <a href={copy.home.cta.secondaryHref} class="cta-btn cta-btn-primary">
         <svg class="dmg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
         {copy.home.cta.secondaryButton}
@@ -68,6 +68,11 @@ import { copy } from '../../content/copy';
   .cta-btn-primary:hover {
     background: var(--color-accent-hover);
     color: #ffffff;
+  }
+
+  .btn-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .cta-btn-secondary {
