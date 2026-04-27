@@ -1,35 +1,35 @@
-<?xml version="1.0" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <channel>
-        <title>iClaw</title>
-        <link>https://geticlaw.com/appcast.xml</link>
-        <description>Most recent changes with links to updates.</description>
-        <language>en</language>
-        <item>
-            <title>iClaw 1.0.0</title>
-            <pubDate>Wed, 09 Apr 2026 12:00:00 +0000</pubDate>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[
-                <h2>iClaw 1.0.0</h2>
-                <ul>
-                    <li>Initial release</li>
-                    <li>On-device AI agent powered by Apple Foundation Models</li>
-                    <li>30+ built-in tools: weather, stocks, calendar, email, web search, and more</li>
-                    <li>Liquid Glass menu bar HUD</li>
-                    <li>Voice input with on-device speech recognition</li>
-                    <li>Safari browser extension</li>
-                    <li>Dynamic widget system</li>
-                    <li>Vector memory with GRDB + sqlite-vec</li>
-                </ul>
-            ]]></description>
-            <enclosure
-                url="https://geticlaw.com/releases/iClaw-1.0.0.dmg"
-                type="application/octet-stream"
-                sparkle:version="241"
-                sparkle:shortVersionString="1.0.0"
-                sparkle:edSignature="1GxD5RHjON02hPw1xt64oaJBzwfdpqS+jP2prpEngo9Bm7594a3In4UmQzbbxBh35WU5Yan19p8EVMCl77aXCQ=="
-                length="22872621"
-            />
-        </item>
-    </channel>
+  <channel>
+    <title>iClaw Updates</title>
+    <link>https://geticlaw.com/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <item>
+      <title>iClaw 1.0.0</title>
+      <pubDate>Mon, 27 Apr 2026 15:52:27 -0400</pubDate>
+      <sparkle:version>3</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h2>iClaw 1.0.0</h2>
+        <ul>
+          <li>Initial release</li>
+          <li>On-device AI agent powered by Apple Foundation Models</li>
+          <li>30+ built-in tools: weather, stocks, calendar, email, web search, and more</li>
+          <li>Liquid Glass menu bar HUD</li>
+          <li>Voice input with on-device speech recognition</li>
+          <li>Safari browser extension</li>
+          <li>Dynamic widget system</li>
+          <li>Vector memory with GRDB + sqlite-vec</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://github.com/LastByteLLC/iClaw/releases/download/v1.0.0/iClaw.dmg"
+        length="23102329"
+        type="application/octet-stream"
+        sparkle:edSignature="6f6p9Vt56rGbHY4VfxwANDRwG/cVnWRuL/+1NvSV3MjkYD0mEFu6GsT+pQLV8IrbtaEOf0rDB4TME4775AZ8CA=="
+      />
+    </item>
+  </channel>
 </rss>
